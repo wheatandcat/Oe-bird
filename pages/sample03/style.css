@@ -1,0 +1,54 @@
+@keyframes seamless-loop {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.rainbow-beam {
+  background: linear-gradient(
+    to right,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #00ffff,
+    #0000ff,
+    #8b00ff,
+    #ff0000
+  );
+
+  background-size: 200% 100%;
+
+  animation: seamless-loop 2s linear infinite;
+}
+
+/* 汎用スタイル */
+.detail {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  overflow: hidden;
+  height: 450px;
+  width: 450px;
+  border: 3px solid #313131;
+  border-radius: 15px;
+}
+
+.bird {
+  position: relative;
+  z-index: 2;
+  display: block;
+  max-width: 100%;
+}
+
+.beam {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: 1;
+}

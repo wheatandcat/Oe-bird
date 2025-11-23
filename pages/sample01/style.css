@@ -1,0 +1,24 @@
+.beam {
+  position: absolute;
+  background-color: rgb(123, 197, 119);
+  width: 100%;
+  height: 100%;
+}
+
+/* 汎用スタイル */
+.detail {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  overflow: hidden;
+  height: 450px;
+  width: 450px;
+  border: 3px solid #313131;
+  border-radius: 15px;
+}
+
+.bird {
+  position: relative;
+  display: block;
+  max-width: 100%;
+}
