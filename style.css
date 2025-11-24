@@ -386,9 +386,13 @@
   left: 0;
 }
 
+.background {
+  background-color: #076dff;
+}
+
 .card-loop {
   width: 300px;
-  display: block;
+  overflow: hidden;
   transform-style: preserve-3d;
   animation: spin-card 4s linear infinite;
 }
@@ -409,6 +413,40 @@
   100% {
     transform: rotateY(360deg);
   } /* 再び正面 */
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(300px);
+  }
+  5% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(0px);
+  }
+  15% {
+    transform: rotateY(180deg) translateX(30px);
+  }
+  20% {
+    transform: rotateY(180deg) translateX(30px);
+  }
+  25% {
+    transform: rotateY(0deg);
+  }
+  30% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: translateY(300px);
+  }
+}
+
+.move {
+  width: 300px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  animation: jump 6s linear infinite;
 }
 
 .bird11 {
